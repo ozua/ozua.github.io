@@ -4,7 +4,7 @@
 	<title>Professional Resume</title>
 	<style>
 		#main {
-            		width: 595px; 
+           		width: 595px; 
             		height: 543px;
             		padding: 3px; 
             		background: #D3D3D3; 
@@ -12,11 +12,7 @@
             		color: #FFF;
             		font-family: Calibri; 
         	}
-   		.back {
-			position: float;
-			background-color: #FFF;
-		}
-		.header {
+        	#header {
             		letter-spacing: -0.20px;
             		height: 48px;
             		background-color: #3D4F5B;
@@ -24,49 +20,56 @@
             		font-size: 22pt;
             		padding-top: 12px;
 		}
-		.credback {
-			position: relative;
-            		width: 150px; 
+        	#right {
+			padding-top: 112px;
+			margin-left: 160px;
+        		font-size: 16pt;
+			letter-spacing: -0.55px;
+			color: #3C6A99;
+        	}
+        	#left {
+        		width: 130px;
+        	}
+   		#back {
+   			height: 543px;
+			background-color: #FFF;
+		}
+		#leftBack {
+			float: left;
+			width: 150px; 
             		height: 483px;
             		background: linear-gradient(to right, #404040, #707070);
 		}
-		.photo {
+		#photo {
 			position: relative;
 			top: 20px;
 			left: 20px;
 			border: 2px solid #D4D4D4;
 			border-radius: 40px;
 			width: 100px; 
-         		height: 100px;
-			background-image: url('../images.jpg');
+            		height: 100px;
+			background-image: url('../html/images.jpg');
 			/*url(/https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkhB4xFAlIU6TUpXFwYT9-SJnEb4S3OWFuATNsw92VeYxXNt0C)*/;
 			background-size: contain;
 		}
-		.name {
-            		position: relative;
+		#name {
             		height: 35px;
-            		width: 130px;
             		text-align: left;
             		word-wrap: break-word;
             		font-size: 24pt;
             		padding-top: 15px;
-            		padding-right: 10px;
             		padding-left: 10px;
-        	}		
-        	.nameline {
+        	}
+        	#nameLine {
             		position: relative;
-            		width: 130px;
             		left: 10px;
-            		padding-top: 75px;
-            		padding-bottom: 1px;
+            		padding-top: 76px;
             		border-bottom: 2px solid #FFFF00;
         	}
         	.positions {
-            		position: relative;
-            		height: 20px;
+           		height: 20px;
             		padding-top: 20px;
-            		padding-right: 10px;
-            		padding-left: 10px;
+            		padding-left: 20px;
             		text-align: center;
         	}
         	.bar1 {
@@ -77,120 +80,109 @@
         	.bar2 {
 			top: 30px;
 			width: 70px; 
-            	background-color: #0075E3;
+            		background-color: #0075E3;
         	}
         	.bar3 {
 			top: 37px;
-			width: 130px; 
-            		background-color: #008100;
-        	}
-        	.contacts {
-            		padding-top: 57px;
-        	}
-        	.field1 {
-        		position: fixed;
-        		height: 113px;
-            		width: 410px;
-            		margin-left: 138px;
-			margin-top: -11px;
-		}
-        	.field2 {
-            		height: 114px;
-			margin-top: 21px;
-		}
-		.field3 {
-            		height: 87px;
-            		margin-top: 11px;
-		}
-		.iborder {
-		  	border-bottom: 2px solid #0081FF;	
-		}
-		.iheader {
-			font-size: 16pt;
-			font-weight: bold;
-			letter-spacing: -0.25px;
-			color: #3C6A99;
-		}
-		.itext {
-			font-size: 16pt;
-			font-weight: lighter;
-			letter-spacing: -0.25px;
-			color: #3C6A99;
-		}
-        	.list {
-        		padding-right: 4px;
-        		color: #00C0FF;
-        		font-size: 13pt;
-        		font-weight: normal;
-        		text-decoration: underline; 
-        	}
-        	.list2 {
-        		padding-top: 3px;
-        		padding-left: 4px;
-        		line-height: 1.15;
-        	}
-        	.sline {
-        		font-size: 14pt;
-            		font-weight: bold;
-            		text-decoration: underline;
+			background-color: #008100;
         	}
         	.bars {
-           		margin-top: -2px;
-        	}
-        	.bars2 {
         		position: relative;
 			left: 4px;
 			border-radius: 4px;
             		height: 13px;
             		font-size: 8pt;
             		text-align: center;
+            		margin-top: -2px;
+        	}
+        	.hrefHeader {
+        		padding-top: 3px;
+        		padding-left: 4px;
+        		line-height: 1.15;
+        		letter-spacing: -0.55px;
+        	}
+        	.underline {
+        		font-size: 14pt;
+            		font-weight: bold;
+            		text-decoration: underline;
+        	}
+        	.contacts {
+            		padding-top: 57px;
+        	}
+        	.rightField1 {
+        		height: 113px;
+            		width: 410px;
+            		margin-top: -101px;
+		}
+        	.rightField2 {
+            		height: 114px;
+			margin-top: 21px;
+		}
+		.rightField3 {
+            		height: 87px;
+            		margin-top: 11px;
+        	}
+        	.rightTextBorder {
+		    	border-bottom: 2px solid #0081FF;	
+		}
+		.rightTextHeader {
+			font-weight: bold;	
+		}
+		.rightText {
+			font-weight: lighter;	
+		}
+        	a {
+        	margin: -4px;
+        	padding-right: 4px;
+        	color: #00C0FF;
+        	font-size: 13pt;
+        	font-weight: normal;
+        	text-decoration: underline;
+        	letter-spacing: -0.55px;
         	}
 	</style>
 </head>
 <body>
 	<div id="main">
-		<div class="back">
-			<div class="header">High quality specialist</div>
-			<div class="credback">
-				<div class="photo">
-					<div class="field1 iborder">
-						<span class="iheader">Date of birth:<br></span>
-							<span class="itext">1 december 2000</span><br>
-						<span class="iheader">Place of birth:<br></span>
-							<span class="itext">Madagascar</span>
-						<div class="field2 iborder">
-							<span class="iheader">Soft skills:</span><br>
-								<span class="itext">- Photoshop</span><br>
-								<span class="itext">- Word</span><br>
-								<span class="itext">- Paint</span>
-					    	</div>
-						<div class="field3 iborder">
-							<span class="iheader">About me:</span><br>
-								<span class="itext">- Don't smoke</span><br>
-								<span class="itext">- Eat a lot</span>
-						</div>
+		<div id="back">
+			<div id="header">High quality specialist</div>
+			<div id="leftBack">
+				<div id="left">
+					<div id="photo"></div>
+					<div id="name"><p>Tumba Ujumba</p></div>
+			    		<div id="nameLine"></div>
+			    		<div class="positions underline">Prefer:</div>
+			    		<div class="bars bar1">Bananas</div>
+			    		<div class="bars bar2">Cocoses</div>
+			    		<div class="bars bar3">Madagascar</div>
+			    		<div class="positions contacts underline">Contacts</div>
+			    		<div class="underline hrefHeader">
+			    			<ul>
+			    				<li><a href="https://www.vk.com/">Vk</a></li>
+			    				<li><a href="https://www.ok.ru/">Ok</a></li>
+			    	    			<li><a href="https://www.facebook.com/">Facebook</a></li>
+			        		</ul>
+			    		</div>
+				</div>
+			</div>
+			<div id="right">
+				<div class="rightField1 rightTextBorder">
+					<span class="rightTextHeader">Date of birth:<br></span>
+						<span class="rightText">1 december 2000</span><br>
+					<span class="rightTextHeader">Place of birth:<br></span>
+						<span class="rightText">Madagascar</span>
+					<div class="rightField2 rightTextBorder">
+						<span class="rightTextHeader">Soft skills:</span><br>
+							<span class="rightText">- Photoshop</span><br>
+							<span class="rightText">- Word</span><br>
+							<span class="rightText">- Paint</span>
+				    	</div>
+					<div class="rightField3 rightTextBorder">
+						<span class="rightTextHeader">About me:</span><br>
+							<span class="rightText">- Don't smoke</span><br>
+							<span class="rightText">- Eat a lot</span>
 					</div>
 				</div>
-				<div class="name"><p>Tumba Ujumba</p></div>
-			    <div class="nameline"></div>
-			    <div class="positions sline">Prefer:</div>
-			    <div class="bars2 bar1">
-			    	<div class="bars">Bananas</div>
-			    </div>
-			    <div class="bars2 bar2">
-			    	<div class="bars">Cocoses</div>
-			    </div>
-			    <div class="bars2 bar3">
-			    	<div class="bars">Madagascar</div>
-			    </div>
-			    <div class="positions contacts sline">Contacts</div>
-			    <div class="sline list2">
-			    	<ul>
-			    		<li><a href="https://www.vk.com/" class="list">VK</a></li>
-			    		<li><a href="https://www.ok.ru/" class="list">OK</a></li>
-			    	    	<li><a href="https://www.facebook.com/" class="list">Facebook</a></li>
-			        </ul>
-			    </div>
 			</div>
 		</div>
 	</div>
