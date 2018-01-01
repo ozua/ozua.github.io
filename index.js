@@ -1,5 +1,5 @@
 var num = Math.floor((10*Math.random()) + 1);
-//console.log(num);
+console.log(num);
 var count = 9;
 
 function main() {
@@ -24,19 +24,19 @@ function main() {
 	}
 }
 
-function validate(evt) {
-    var theEvent = evt || window.event;
-    if (theEvent.charCode >= 48 && theEvent.charCode <= 57) {
-		var key = theEvent.keyCode || theEvent.which;
-        	key = String.fromCharCode( key );
+function validate() {
+    var evt = event || window.event;
+    if (evt.charCode >= 48 && evt.charCode <= 57) {
+		var key = evt.keyCode || evt.which;
+        	key = String.fromCharCode(key);
             
         	var val = document.getElementById("inum").value + key;
-        	if ( val > 0 && val < 11 ) {
+        	if (val > 0 && val < 11) {
         		return true
     		} 
 	}
-    theEvent.returnValue = false;
-    if(theEvent.preventDefault) theEvent.preventDefault();
+    evt.returnValue = false;
+    if(evt.preventDefault) evt.preventDefault();
 }
 
 function check() {
