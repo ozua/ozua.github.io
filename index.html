@@ -30,6 +30,21 @@
 						alert ('Game over! Игра будет перезагружена. Число было: ' + num) (location.reload());
 					}
 				}
+
+				function validate(evt) {
+        			var theEvent = evt || window.event;
+        			if (theEvent.charCode >= 48 && theEvent.charCode <= 57) {
+						var key = theEvent.keyCode || theEvent.which;
+            			key = String.fromCharCode( key );
+            
+          				var val = document.getElementById("inum").value + key;
+            			if ( val > 0 && val < 11 ) {
+            			return true
+            			} 
+          			}
+          			theEvent.returnValue = false;
+          			if(theEvent.preventDefault) theEvent.preventDefault();
+        		}
 			</script>
 			<style>
 				#main {
@@ -64,7 +79,7 @@
 		<div id="main">
 			<div align="center"> Угадай число </div>
 			<div id="input">
-			<p>Введите число от 1 до 10: <input type="text" id="inum" maxlength="2"> </p>
+			<p>Введите число от 1 до 10: <input type="text" id="inum" onkeypress='validate(event)' maxlength="2"> </p>
 			
 			</div>
 			<div id="button">
