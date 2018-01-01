@@ -1,189 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Professional Resume</title>
-	<style>
-		#main {
-           		width: 595px; 
-            		height: 543px;
-            		padding: 3px; 
-            		background: #D3D3D3; 
+	<head>
+		<title>Игра угадай число</title>
+			<script type="text/javascript" defer>
+
+				var num = Math.floor((10*Math.random()) + 1);
+				console.log(num);
+				var count = 9;
+
+
+				function main() {
+	 				if (count > 0){
+						var usernum = document.getElementById('inum').value;
+						var out = document.getElementById('out');
+			
+						if (usernum == num) {
+							alert ('Ура вы угадали! Игра будет перезагружена.') (location.reload());
+						}
+						else if (usernum > num) {
+							out.innerHTML = 'Ваше число больше';
+						}
+						else {
+							out.innerHTML = 'Ваше число меньше';
+						}
+						document.getElementById('count').innerHTML = 'Осталось попыток: ' + count + ' из 10';
+						count = count - 1;
+					}
+					else {
+						alert ('Game over! Игра будет перезагружена. Число было: ' + num) (location.reload());
+					}
+				}
+			</script>
+			<style>
+				#main {
+					padding: 10px;
+					border: 3px solid grey;
+					width: 595px; 
+            		height: 150px; 
             		margin: auto;
-            		color: #FFF;
-            		font-family: Calibri; 
-        	}
-        	#header {
-            		letter-spacing: -0.20px;
-            		height: 48px;
-            		background-color: #3D4F5B;
-            		text-align: center;
-            		font-size: 22pt;
-            		padding-top: 12px;
-		}
-        	#right {
-			padding-top: 112px;
-			margin-left: 160px;
-        		font-size: 16pt;
-			letter-spacing: -0.55px;
-			color: #3C6A99;
-        	}
-        	#left {
-        		width: 130px;
-        	}
-   		#back {
-   			height: 543px;
-			background-color: #FFF;
-		}
-		#leftBack {
-			float: left;
-			width: 150px; 
-            		height: 483px;
-            		background: linear-gradient(to right, #404040, #707070);
-		}
-		#photo {
-			position: relative;
-			top: 20px;
-			left: 20px;
-			border: 2px solid #D4D4D4;
-			border-radius: 40px;
-			width: 100px; 
-            		height: 100px;
-			background-image: url('../images.jpg');
-			/*url(/https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkhB4xFAlIU6TUpXFwYT9-SJnEb4S3OWFuATNsw92VeYxXNt0C)*/;
-			background-size: contain;
-		}
-		#name {
-            		height: 35px;
-            		text-align: left;
-            		word-wrap: break-word;
-            		font-size: 24pt;
-            		padding-top: 15px;
-            		padding-left: 10px;
-        	}
-        	#nameLine {
-            		position: relative;
-            		left: 10px;
-            		padding-top: 76px;
-            		border-bottom: 2px solid #FFFF00;
-        	}
-        	.positions {
-           		height: 20px;
-            		padding-top: 20px;
-            		padding-left: 20px;
-            		text-align: center;
-        	}
-        	.bar1 {
-			top: 23px;
-			width: 100px; 
-            		background-color: #FFA600;
-        	}
-        	.bar2 {
-			top: 30px;
-			width: 70px; 
-            		background-color: #0075E3;
-        	}
-        	.bar3 {
-			top: 37px;
-			background-color: #008100;
-        	}
-        	.bars {
-        		position: relative;
-			left: 4px;
-			border-radius: 4px;
-            		height: 13px;
-            		font-size: 8pt;
-            		text-align: center;
-            		margin-top: -2px;
-        	}
-        	.hrefHeader {
-        		padding-top: 3px;
-        		padding-left: 4px;
-        		line-height: 1.15;
-        		letter-spacing: -0.55px;
-        	}
-        	.underline {
-        		font-size: 14pt;
-            		font-weight: bold;
-            		text-decoration: underline;
-        	}
-        	.contacts {
-            		padding-top: 57px;
-        	}
-        	.rightField1 {
-        		height: 113px;
-            		width: 410px;
-            		margin-top: -101px;
-		}
-        	.rightField2 {
-            		height: 114px;
-			margin-top: 21px;
-		}
-		.rightField3 {
-            		height: 87px;
-            		margin-top: 11px;
-        	}
-        	.rightTextBorder {
-		    	border-bottom: 2px solid #0081FF;	
-		}
-		.rightTextHeader {
-			font-weight: bold;	
-		}
-		.rightText {
-			font-weight: lighter;	
-		}
-        	a {
-        		margin: -4px;
-        		color: #00C0FF;
-        		font-size: 13pt;
-        		font-weight: normal;
-        		text-decoration: underline;
-        		letter-spacing: -0.55px;
-        	}
-	</style>
-</head>
-<body>
-	<div id="main">
-		<div id="back">
-			<div id="header">High quality specialist</div>
-			<div id="leftBack">
-				<div id="left">
-					<div id="photo"></div>
-					<div id="name"><p>Tumba Ujumba</p></div>
-			    		<div id="nameLine"></div>
-			    		<div class="positions underline">Prefer:</div>
-			    		<div class="bars bar1">Bananas</div>
-			    		<div class="bars bar2">Cocoses</div>
-			    		<div class="bars bar3">Madagascar</div>
-			    		<div class="positions contacts underline">Contacts</div>
-			    		<div class="underline hrefHeader">
-			    			<ul>
-			    				<li><a href="https://www.vk.com/">Vk</a></li>
-			    				<li><a href="https://www.ok.ru/">Ok</a></li>
-			    	    			<li><a href="https://www.facebook.com/">Facebook</a></li>
-			        		</ul>
-			    		</div>
-				</div>
+            	}
+				#input {
+					float: left;
+					margin-left: 20%;
+				}
+				#inum {
+					width: 40px;
+				}
+				#button {
+			 		margin-top: 2.65%;
+			 		margin-left: 60%;
+			 	}
+			 	#info {
+			 		margin-top: 5%;
+			 	}
+			 	.info {
+			 		margin-left: 41%;
+				}
+
+			</style>
+			
+	</head>
+	<body>
+		<div id="main">
+			<div align="center"> Угадай число </div>
+			<div id="input">
+			<p>Введите число от 1 до 10: <input type="text" id="inum" maxlength="2"> </p>
+			
 			</div>
-			<div id="right">
-				<div class="rightField1 rightTextBorder">
-					<span class="rightTextHeader">Date of birth:<br></span>
-						<span class="rightText">1 december 2000</span><br>
-					<span class="rightTextHeader">Place of birth:<br></span>
-						<span class="rightText">Madagascar</span>
-					<div class="rightField2 rightTextBorder">
-						<span class="rightTextHeader">Soft skills:</span><br>
-							<span class="rightText">- Photoshop</span><br>
-							<span class="rightText">- Word</span><br>
-							<span class="rightText">- Paint</span>
-				    	</div>
-					<div class="rightField3 rightTextBorder">
-						<span class="rightTextHeader">About me:</span><br>
-							<span class="rightText">- Don't smoke</span><br>
-							<span class="rightText">- Eat a lot</span>
-					</div>
-				</div>
+			<div id="button">
+				 <button onclick="main()"> Угадать </button>
 			</div>
-		</div>
-	</div>
-</body>
+			<div id="info">
+				<p class="info" id="out"> </p>
+				<p class="info" id="count"> </p>
+			</div>
+		</div>		
+	</body>
 </html>
