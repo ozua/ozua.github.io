@@ -2,14 +2,14 @@
 <html>
 	<head>
 		<title>Игра угадай число</title>
-		<script type="text/javascript" src="index.js" defer> </script>
-		<link href='index.css' rel='stylesheet' type='text/css'>
+		<script src="index.js"> </script>
+		<link href='index.css' rel='stylesheet'>
 	</head>
 	<body>
 		<div id="main">
 			<div align="center"> Угадай число </div>
 			<div id="input">
-			<p>Введите число от 1 до 10: <input type="text" id="inum" onkeypress="validate(event)" maxlength="2" onkeyup="check()"> </p>
+				<p>Введите число от 1 до 10: <input id="inum" type="text" onkeypress="validate(event)" onkeyup="check()"> </p>
 			</div>
 			<div id="button">
 				 <button id="checkB" onclick="main()" disabled> Угадать </button>
