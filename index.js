@@ -1,12 +1,6 @@
 var num = Math.floor((10*Math.random()) + 1);
-console.log(num);
+//console.log(num);
 var count = 9;
-// var check = document.checkB;
-
-// function change_status(){
-// 	check.checkB.disabled = (check.inum.value.length > 0) ? false : true;
-// }
-// change_status();
 
 function main() {
 	if (count > 0){
